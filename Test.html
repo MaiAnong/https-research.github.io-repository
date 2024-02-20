@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form id="loginForm">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+            <button type="button" onclick="login()">Login</button>
+        </div>
+    </form>
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Check if the username and password match any of the predefined users
+            if (username === "Admin" && password === "12345") {
+                alert("Login successful!");
+                window.location.href = "page1.html"; // Redirect to Page 1
+            } else if (username === "Test1" && password === "11111") {
+                alert("Login successful!");
+                window.location.href = "page2.html"; // Redirect to Page 2
+            } else if (username === "Test2" && password === "22222") {
+                alert("Login successful!");
+                window.location.href = "page3.html"; // Redirect to Page 3
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
